@@ -7,10 +7,10 @@ spec:
   template:
     metadata:
       labels:
-        app: vote-back-{{.Values.serviceName}}
+        app: {{.Values.serviceName}}-vote-back
     spec:
       containers:
-      - name: vote-back-{{.Values.serviceName}}
+      - name: {{.Values.serviceName}}-vote-back
         image: redis
         ports:
         - containerPort: 6379
@@ -19,7 +19,7 @@ spec:
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: vote-front-{{.Values.serviceName}}
+  name: {{.Values.serviceName}}-vote-front
 spec:
   replicas: 1
   strategy:
@@ -30,7 +30,7 @@ spec:
   template:
     metadata:
       labels:
-        app: vote-front-{{.Values.serviceName}}
+        app: {{.Values.serviceName}}-vote-front
     spec:
       containers:
       - name: azure-vote-front
@@ -45,7 +45,7 @@ spec:
             cpu: 500m
         env:
         - name: REDIS
-          value: vote-back-{{.Values.serviceName}}
+          value: {{.Values.serviceName}}-vote-back
         - name: TITLE
           value: {{ .Values.title }}
         - name: VOTE1VALUE
