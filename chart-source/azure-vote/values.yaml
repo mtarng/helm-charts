@@ -5,7 +5,7 @@ value2: Dogs
 
 # Service controlls
 serviceNameFront: azure-vote-front
-serviceType: LoadBalancer
+serviceType: ClusterIP
 
 serviceName: azure-vote
 
