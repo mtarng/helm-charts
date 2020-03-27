@@ -7,6 +7,8 @@ value2: Dogs
 serviceNameFront: azure-vote-front
 serviceType: LoadBalancer
 
+serviceName: azure-vote
+
 image:
   repository: mtarng
   tag: latest
