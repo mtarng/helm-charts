@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{.Values.serviceName}}-vote-back
+  name: vote-back-{{.Values.serviceName}}
   labels:
-    name: {{.Values.serviceName}}-vote-back
+    name: vote-back-{{.Values.serviceName}}
 spec:
   ports:
   - port: 6379
   selector:
-    app: {{.Values.serviceName}}-vote-back
+    app: vote-back-{{.Values.serviceName}}
 ---
 apiVersion: v1
 kind: Service
@@ -21,4 +21,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: {{.Values.serviceName}}-vote-front
+    app: vote-front-{{.Values.serviceName}}
