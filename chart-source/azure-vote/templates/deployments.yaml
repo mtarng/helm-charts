@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: vote-back-{{.Values.serviceName}}
 spec:
-  replicas: {{ .Values.back.ReplicaCount }}
+  replicas: {{ .Values.back.replicaCount }}
   template:
     metadata:
       labels:
