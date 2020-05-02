@@ -14,4 +14,8 @@ image:
   repository: mtarng
   tag: latest
 
-replicaCount: 1
+back:
+  replicaCount: 1
+
+front:
+  replicaCount: 2
