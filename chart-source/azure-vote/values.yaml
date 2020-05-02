@@ -1,14 +1,17 @@
-# Azure Vote UI controll
+# Azure Vote UI control
 title: "Azure Vote App"
 value1: Cats
 value2: Dogs
 
-# Service controlls
+# Service controls
 serviceNameFront: azure-vote-front
 serviceType: ClusterIP
 
 serviceName: azure-vote
 
+# Deployment controls
 image:
   repository: mtarng
   tag: latest
+
+replicaCount: 1
